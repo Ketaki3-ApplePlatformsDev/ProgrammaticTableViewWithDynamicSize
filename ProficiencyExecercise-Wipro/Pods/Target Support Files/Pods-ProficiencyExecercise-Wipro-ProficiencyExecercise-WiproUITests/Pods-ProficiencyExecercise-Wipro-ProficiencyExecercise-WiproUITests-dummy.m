@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ProficiencyExecercise_Wipro_ProficiencyExecercise_WiproUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ProficiencyExecercise_Wipro_ProficiencyExecercise_WiproUITests
+@end
