@@ -7,6 +7,8 @@ target 'ProficiencyExecercise-Wipro' do
 
   # Pods for ProficiencyExecercise-Wipro
 	pod 'Alamofire'
+  pod 'SDWebImage'
+  pod 'NVActivityIndicatorView'
 
   target 'ProficiencyExecercise-WiproTests' do
     inherit! :search_paths
