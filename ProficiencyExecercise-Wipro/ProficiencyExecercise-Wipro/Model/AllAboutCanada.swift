@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AllAboutCanada: Decodable {
+struct AllAboutCanada: Codable {
     var title: String
     var all: [AboutCanada]
     

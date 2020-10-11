@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		07C9CA3BC89563680ABB7951 /* Pods_ProficiencyExecercise_Wipro_ProficiencyExecercise_WiproUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F0C88C5E396B3E67AB1BC /* Pods_ProficiencyExecercise_Wipro_ProficiencyExecercise_WiproUITests.framework */; };
 		2C8B32A85B8BBBAE5AED35C8 /* Pods_ProficiencyExecercise_Wipro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDC91A2867B30D323D8C8AC /* Pods_ProficiencyExecercise_Wipro.framework */; };
+		4B32FCC82532F72500CC6DEA /* AboutCanadaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32FCC72532F72500CC6DEA /* AboutCanadaTableViewCell.swift */; };
+		4B32FD212533332400CC6DEA /* AboutCanadaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32FD202533332400CC6DEA /* AboutCanadaPresenter.swift */; };
 		4B450DA62532B77900E69944 /* AboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DA52532B77900E69944 /* AboutCanada.swift */; };
 		4B450DB12532BA4400E69944 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DB02532BA4400E69944 /* URLConstants.swift */; };
 		4B450DB62532BA7C00E69944 /* NetworkConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DB52532BA7C00E69944 /* NetworkConnectivityManager.swift */; };
 		4B450DBE2532BD6E00E69944 /* WebServiceCallsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DBD2532BD6E00E69944 /* WebServiceCallsManager.swift */; };
-		4B450DD12532F0F900E69944 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DD02532F0F900E69944 /* HelperMethods.swift */; };
 		4B450DD62532F1BC00E69944 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DD52532F1BC00E69944 /* AppConstants.swift */; };
 		4B450DDB2532F2EF00E69944 /* AllAboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DDA2532F2EF00E69944 /* AllAboutCanada.swift */; };
 		4B64A151253208AC003FAF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64A150253208AC003FAF33 /* AppDelegate.swift */; };
@@ -49,11 +50,12 @@
 		33D2A8D659DEB6E755E38D57 /* Pods-ProficiencyExecercise-WiproTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyExecercise-WiproTests.debug.xcconfig"; path = "Target Support Files/Pods-ProficiencyExecercise-WiproTests/Pods-ProficiencyExecercise-WiproTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A7E6DE5815EEF659B3DDB0E /* Pods-ProficiencyExecercise-Wipro-ProficiencyExecercise-WiproUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyExecercise-Wipro-ProficiencyExecercise-WiproUITests.release.xcconfig"; path = "Target Support Files/Pods-ProficiencyExecercise-Wipro-ProficiencyExecercise-WiproUITests/Pods-ProficiencyExecercise-Wipro-ProficiencyExecercise-WiproUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E55376E8B19A8AF975F8031 /* Pods-ProficiencyExecercise-Wipro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyExecercise-Wipro.release.xcconfig"; path = "Target Support Files/Pods-ProficiencyExecercise-Wipro/Pods-ProficiencyExecercise-Wipro.release.xcconfig"; sourceTree = "<group>"; };
+		4B32FCC72532F72500CC6DEA /* AboutCanadaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewCell.swift; sourceTree = "<group>"; };
+		4B32FD202533332400CC6DEA /* AboutCanadaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaPresenter.swift; sourceTree = "<group>"; };
 		4B450DA52532B77900E69944 /* AboutCanada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanada.swift; sourceTree = "<group>"; };
 		4B450DB02532BA4400E69944 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		4B450DB52532BA7C00E69944 /* NetworkConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectivityManager.swift; sourceTree = "<group>"; };
 		4B450DBD2532BD6E00E69944 /* WebServiceCallsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceCallsManager.swift; sourceTree = "<group>"; };
-		4B450DD02532F0F900E69944 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		4B450DD52532F1BC00E69944 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4B450DDA2532F2EF00E69944 /* AllAboutCanada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAboutCanada.swift; sourceTree = "<group>"; };
 		4B64A14D253208AC003FAF33 /* ProficiencyExecercise-Wipro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProficiencyExecercise-Wipro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B32FD1F253332BC00CC6DEA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4B32FD202533332400CC6DEA /* AboutCanadaPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		4B450DAA2532B98200E69944 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +128,6 @@
 		4B450DCF2532F0C800E69944 /* UtilityClasses */ = {
 			isa = PBXGroup;
 			children = (
-				4B450DD02532F0F900E69944 /* HelperMethods.swift */,
 				4B450DD52532F1BC00E69944 /* AppConstants.swift */,
 			);
 			path = UtilityClasses;
@@ -155,7 +164,7 @@
 				4B450DAA2532B98200E69944 /* Network Layer */,
 				4B70EC1C253229BE00353031 /* Model */,
 				4B70EC1D253229E700353031 /* View */,
-				4B70EC172532290600353031 /* Controller */,
+				4B32FD1F253332BC00CC6DEA /* Presenter */,
 				4B64A15C253208AD003FAF33 /* Assets.xcassets */,
 				4B64A15E253208AD003FAF33 /* LaunchScreen.storyboard */,
 				4B64A161253208AD003FAF33 /* Info.plist */,
@@ -182,14 +191,6 @@
 			path = "ProficiencyExecercise-WiproUITests";
 			sourceTree = "<group>";
 		};
-		4B70EC172532290600353031 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4B64A154253208AC003FAF33 /* AboutCanadaViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		4B70EC1C253229BE00353031 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +203,8 @@
 		4B70EC1D253229E700353031 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B32FCC72532F72500CC6DEA /* AboutCanadaTableViewCell.swift */,
+				4B64A154253208AC003FAF33 /* AboutCanadaViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,9 +473,10 @@
 				4B64A155253208AC003FAF33 /* AboutCanadaViewController.swift in Sources */,
 				4B64A151253208AC003FAF33 /* AppDelegate.swift in Sources */,
 				4B450DB12532BA4400E69944 /* URLConstants.swift in Sources */,
+				4B32FD212533332400CC6DEA /* AboutCanadaPresenter.swift in Sources */,
 				4B64A153253208AC003FAF33 /* SceneDelegate.swift in Sources */,
-				4B450DD12532F0F900E69944 /* HelperMethods.swift in Sources */,
 				4B64A15B253208AC003FAF33 /* ProficiencyExecercise_Wipro.xcdatamodeld in Sources */,
+				4B32FCC82532F72500CC6DEA /* AboutCanadaTableViewCell.swift in Sources */,
 				4B450DDB2532F2EF00E69944 /* AllAboutCanada.swift in Sources */,
 				4B450DB62532BA7C00E69944 /* NetworkConnectivityManager.swift in Sources */,
 				4B450DA62532B77900E69944 /* AboutCanada.swift in Sources */,
@@ -647,6 +651,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ProficiencyExecercise-Wipro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,6 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ProficiencyExecercise-Wipro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

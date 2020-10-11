@@ -15,12 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = AboutCanadaViewController()
         window?.makeKeyAndVisible()
-        WebServiceCallsManager.shared.getData(fromWebService: URLConstants.aboutCanada.rawValue) { aboutCanada in
-            if let aboutCanada
-            print(aboutCanada)
-        }
+
+        let aboutCanadaViewController = AboutCanadaViewController()
+        let navigationViewController = UINavigationController(rootViewController: aboutCanadaViewController)
+        window?.rootViewController = navigationViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
