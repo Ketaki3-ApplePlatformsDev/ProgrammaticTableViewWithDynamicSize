@@ -13,7 +13,6 @@
 		4B32FD212533332400CC6DEA /* AboutCanadaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32FD202533332400CC6DEA /* AboutCanadaPresenter.swift */; };
 		4B450DA62532B77900E69944 /* AboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DA52532B77900E69944 /* AboutCanada.swift */; };
 		4B450DB12532BA4400E69944 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DB02532BA4400E69944 /* URLConstants.swift */; };
-		4B450DB62532BA7C00E69944 /* NetworkConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DB52532BA7C00E69944 /* NetworkConnectivityManager.swift */; };
 		4B450DBE2532BD6E00E69944 /* WebServiceCallsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DBD2532BD6E00E69944 /* WebServiceCallsManager.swift */; };
 		4B450DD62532F1BC00E69944 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DD52532F1BC00E69944 /* AppConstants.swift */; };
 		4B450DDB2532F2EF00E69944 /* AllAboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B450DDA2532F2EF00E69944 /* AllAboutCanada.swift */; };
@@ -52,9 +51,9 @@
 		3E55376E8B19A8AF975F8031 /* Pods-ProficiencyExecercise-Wipro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyExecercise-Wipro.release.xcconfig"; path = "Target Support Files/Pods-ProficiencyExecercise-Wipro/Pods-ProficiencyExecercise-Wipro.release.xcconfig"; sourceTree = "<group>"; };
 		4B32FCC72532F72500CC6DEA /* AboutCanadaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewCell.swift; sourceTree = "<group>"; };
 		4B32FD202533332400CC6DEA /* AboutCanadaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaPresenter.swift; sourceTree = "<group>"; };
+		4B32FD9F25336A7D00CC6DEA /* MockAllAboutCanadaJSONData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = MockAllAboutCanadaJSONData.geojson; sourceTree = "<group>"; };
 		4B450DA52532B77900E69944 /* AboutCanada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanada.swift; sourceTree = "<group>"; };
 		4B450DB02532BA4400E69944 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
-		4B450DB52532BA7C00E69944 /* NetworkConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectivityManager.swift; sourceTree = "<group>"; };
 		4B450DBD2532BD6E00E69944 /* WebServiceCallsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceCallsManager.swift; sourceTree = "<group>"; };
 		4B450DD52532F1BC00E69944 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4B450DDA2532F2EF00E69944 /* AllAboutCanada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAboutCanada.swift; sourceTree = "<group>"; };
@@ -119,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				4B450DB02532BA4400E69944 /* URLConstants.swift */,
-				4B450DB52532BA7C00E69944 /* NetworkConnectivityManager.swift */,
 				4B450DBD2532BD6E00E69944 /* WebServiceCallsManager.swift */,
 			);
 			path = "Network Layer";
@@ -178,6 +176,7 @@
 			children = (
 				4B64A16A253208AE003FAF33 /* ProficiencyExecercise_WiproTests.swift */,
 				4B64A16C253208AE003FAF33 /* Info.plist */,
+				4B32FD9F25336A7D00CC6DEA /* MockAllAboutCanadaJSONData.geojson */,
 			);
 			path = "ProficiencyExecercise-WiproTests";
 			sourceTree = "<group>";
@@ -478,7 +477,6 @@
 				4B64A15B253208AC003FAF33 /* ProficiencyExecercise_Wipro.xcdatamodeld in Sources */,
 				4B32FCC82532F72500CC6DEA /* AboutCanadaTableViewCell.swift in Sources */,
 				4B450DDB2532F2EF00E69944 /* AllAboutCanada.swift in Sources */,
-				4B450DB62532BA7C00E69944 /* NetworkConnectivityManager.swift in Sources */,
 				4B450DA62532B77900E69944 /* AboutCanada.swift in Sources */,
 				4B450DD62532F1BC00E69944 /* AppConstants.swift in Sources */,
 			);

@@ -7,12 +7,13 @@
 
 import Foundation
 
+/// Model used to parse the JSON response
 struct AllAboutCanada: Codable {
     var title: String
     var all: [AboutCanada]
     
     enum CodingKeys: String, CodingKey {
-      case title
-      case all = "rows"
+        case title
+        case all = "rows"
     }
 }

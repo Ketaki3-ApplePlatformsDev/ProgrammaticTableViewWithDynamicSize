@@ -19,9 +19,7 @@ class AboutCanadaViewController: UIViewController {
     
     private let viewControllerPresenter = AboutCanadaViewControllerPresenter()
     
-    var safeArea: UILayoutGuide!
-    
-    //Used to store "AboutCanada" type data to be loaded on AboutCanadaTableViewCell
+    /// Used to store "AboutCanada" type data to be loaded on AboutCanadaTableViewCell
     lazy var aboutCanadaArray: [AboutCanada] = {
         return []
     }()
@@ -30,7 +28,7 @@ class AboutCanadaViewController: UIViewController {
         // To keep track of image aync call to update that particular cell
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCell(_:)), name: NSNotification.Name(rawValue: NotificationNames.reloadCell.rawValue), object: nil)
         // To keep track if internet is discomnnected then refresh control should end refreshing without blocking main thread
-        NotificationCenter.default.addObserver(self, selector: #selector(self.endrefreshing(_:)), name: NSNotification.Name(rawValue: NotificationNames.refreshControl.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.endRefreshing(_:)), name: NSNotification.Name(rawValue: NotificationNames.refreshControl.rawValue), object: nil)
         
         view.backgroundColor = .clear
         setupTableView()
@@ -40,6 +38,9 @@ class AboutCanadaViewController: UIViewController {
 
 // MARK: - UI Methods
 extension AboutCanadaViewController {
+    /**
+     Method that sets up the TableView's delegate, datasource and other ui controls being displayed eg. refresh control .
+     */
     func setupTableView() {
         aboutTableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -60,6 +61,9 @@ extension AboutCanadaViewController {
         view.addSubview(aboutTableView)
     }
     
+    /**
+     Method that sets up the TableView's layout constraints.
+     */
     func setTableViewConstraints() {
         aboutTableView.translatesAutoresizingMaskIntoConstraints = false
         aboutTableView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
@@ -70,7 +74,9 @@ extension AboutCanadaViewController {
 }
 
 extension AboutCanadaViewController {
-    // Method for adding activityIndicator for loading
+    /**
+     Method for adding activityIndicator for loading
+     */
     func setupActivityIndicator() {
         activityIndicator = NVActivityIndicatorView(frame: CGRect(x: view.bounds.size.width/2-25, y: view.bounds.size.height/2-25, width: 50, height: 50))
         activityIndicator.type = . circleStrokeSpin
@@ -79,9 +85,12 @@ extension AboutCanadaViewController {
         activityIndicator.startAnimating()
     }
     
-    // Method for ending refresh after No internet alert is presented so that main thread should not interupted.
-    // This method is called from Notification
-    @objc func endrefreshing(_ notification: NSNotification ) {
+    /**
+     Method for ending refresh after No internet alert is presented so that main thread should not be interupted.
+     
+     This method is called from Notification
+     */
+    @objc func endRefreshing(_ notification: NSNotification ) {
         if self.refreshControl.isRefreshing {
             self.refreshControl.endRefreshing()
             aboutCanadaArray = []
@@ -90,14 +99,17 @@ extension AboutCanadaViewController {
         }
     }
     
-    // Method for reloading Cell after image gets downloaded.
-    // This method is called from Notification
+    /**
+     Method to reload Cell after image is downloaded.
+     
+     This method is called from Notification
+     */
     @objc func reloadCell(_ notification: NSNotification ) {
         if let notificationUserInfo = notification.userInfo {
             
             if let currentCell = notificationUserInfo[NotificationNames.userInfoKeyCell.rawValue] {
                 guard let indexPath = self.aboutTableView.indexPath(for: (currentCell as? AboutCanadaTableViewCell)!) else {
-                    // Note, this is to make sure, cell to reload is still in visible rect
+                    // This is to make sure, cell to reload is still in visible rect
                     return
                 }
                 
@@ -109,9 +121,13 @@ extension AboutCanadaViewController {
         }
     }
     
-    // Method for Calling for service to get data.
+    /**
+     Method for Calling for service to get data.
+     
+     - Parameter completionHandler: The Completion Handler that gets called after we have retrieved the data
+     */
     func getDataFromService (completionHandler: @escaping CompletionHandler) {
-        viewControllerPresenter.attachedController(controler: self)
+        viewControllerPresenter.attachController(controller: self)
         WebServiceCallsManager.shared.getData(fromWebService: URLConstants.aboutCanada.rawValue, completionHandler: {[weak self] (status, rows, title) in
             if let weekSelf = self {
                 weekSelf.viewControllerPresenter.detachController()
@@ -147,7 +163,9 @@ extension AboutCanadaViewController {
         
     }
     
-    // Method for Calling for service to get data for table view.
+    /**
+     Method for Calling for service to get data for table view.
+     */
     @objc func loadAndRefreshDataFromService() {
         
         // Checking if internet connection is available.
@@ -192,6 +210,7 @@ extension AboutCanadaViewController {
     }
 }
 
+// MARK: - UITableViewDataSource Methods
 extension AboutCanadaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return aboutCanadaArray.count
@@ -207,6 +226,7 @@ extension AboutCanadaViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate Methods
 extension AboutCanadaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension

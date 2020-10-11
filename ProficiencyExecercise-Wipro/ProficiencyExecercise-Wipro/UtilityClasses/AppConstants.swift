@@ -7,14 +7,12 @@
 
 import Foundation
 
+/// Enum that stores the String Constants being used in the app
 enum StringConstants: String {
     case ok = "Ok"
-    case networkError = "⚠️ Network Error!!"
-    case internetConnectionOffline = "Your internet connection appears to be offline."
-    case titleUnavailable = "Title is unavailable."
-    case descriptionUnavailable = "Description is unavailable."
 }
 
+/// Enum that stores all the Errors Messages being displayed in the app
 enum ErrorsMessages: String {
     case errorTitle = "⚠️ ERROR!!"
     case noInternet = "Your internet connection appears to be offline."
@@ -22,16 +20,19 @@ enum ErrorsMessages: String {
     case noData = "No Data Available!"
 }
 
+/// Enum that stores all the Notification Names being used in the app
 enum NotificationNames: String {
     case refreshControl = "RefreshControl"
     case reloadCell = "ReloadCell"
     case userInfoKeyCell = "CurrentCell"
 }
 
+/// Enum that stores all the Image Names being used in the app
 enum ImageNames: String {
     case placeholderImage = "placeholder"
 }
 
+/// Enum that stores all the TableView Cell Identifiers being used in the app
 enum TableViewCellIdentifiers: String {
     case aboutCanadaTableViewCell = "AboutCanadaTableViewCell"
 }

@@ -8,7 +8,17 @@
 import Foundation
 import UIKit
 
+/// Presneter for Alerts in the app
 struct AlertPresenter {
+    /**
+     Displays alert message and title on the viewController passed.
+     
+     - Parameter viewController: The on which the alert is to be presnted.
+     
+     - Parameter title: Title of the alert to be displayed.
+     
+     - Parameter message: Message to be displayed in the alert.
+     */
     func displayAlert(inViewController viewController: UIViewController, withTitle title: String?, andMessage message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -20,14 +30,21 @@ struct AlertPresenter {
     }
 }
 
+/// Presenter for AboutCanadaViewController
 class AboutCanadaViewControllerPresenter {
     weak private var controller : UIViewController?
     
-    func attachedController (controler: UIViewController){
-        controller = controler
+    /**
+     Attaches the view controlller passed
+     */
+    func attachController (controller: UIViewController){
+        self.controller = controller
     }
     
+    /**
+     Deattaches the view controlller passed
+     */
     func detachController() {
-        controller = nil
+        self.controller = nil
     }
 }

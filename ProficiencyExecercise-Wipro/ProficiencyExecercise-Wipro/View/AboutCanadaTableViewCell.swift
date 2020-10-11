@@ -28,7 +28,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
             }
             let hideDescriptionLabel = (descriptionLabel.text?.count == 0)  ? true :false
             descriptionLabel.isHidden = hideDescriptionLabel
-
+            
             if let imageURL = aboutCanada.imageURL {
                 setImageWithImageURL(imageUrl: imageURL)
             } else {
@@ -39,7 +39,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
     
     // MARK: - UI Components
     
-    //  ImageView for Cell Image
+    ///  ImageView to display Cell Image
     let aboutImageView:UIImageView = {
         
         let imgageView = UIImageView()
@@ -52,7 +52,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
         return imgageView
     }()
     
-    //  Label for Cell title
+    ///  Label to display Cell title
     let titleLabel: VerticalTopAlignLabel = {
         
         let label = VerticalTopAlignLabel()
@@ -65,7 +65,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
         return label
     }()
     
-    //  Label for Cell Description
+    ///  Label for display Cell Description
     let descriptionLabel: VerticalTopAlignLabel = {
         
         let label = VerticalTopAlignLabel()
@@ -78,7 +78,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
         return label
     }()
     
-    //  containerView for Labels
+    ///  ContainerView for title and description Labels
     let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +132,9 @@ class AboutCanadaTableViewCell: UITableViewCell {
         self.aboutImageView.image = nil
     }
     
-    // Method for Adding Constraints for SubViews
+    /**
+     Method to load image from url asynchrnously in background and using placeholder till image gets loaded.
+     */
     func layoutConstraints() {
         //Adding Constraints
         let marginGuide = contentView.layoutMarginsGuide
@@ -148,7 +150,7 @@ class AboutCanadaTableViewCell: UITableViewCell {
         titleLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor).isActive = true
-    
+        
         // Configure description Label
         descriptionLabel.topAnchor.constraint(equalTo:self.titleLabel.bottomAnchor,constant:5).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
@@ -166,7 +168,11 @@ class AboutCanadaTableViewCell: UITableViewCell {
 
 extension AboutCanadaTableViewCell {
     
-    // Method to load image from url asynchrnously in background and using placeholder till image gets loaded.
+    /**
+     Method to load image from url asynchrnously in background and using placeholder till image gets loaded.
+     
+     - Parameter imageUrl: The remote url of the image to be set.
+     */
     func setImageWithImageURL(imageUrl: String){
         
         aboutImageView.image = nil
@@ -189,7 +195,7 @@ extension AboutCanadaTableViewCell {
 }
 
 
-// Class for creating labels having vertical top alignment for texts in labels.
+/// Class to create labels having vertical top alignment for texts in labels.
 class VerticalTopAlignLabel: UILabel {
     
     override func drawText(in rect:CGRect) {

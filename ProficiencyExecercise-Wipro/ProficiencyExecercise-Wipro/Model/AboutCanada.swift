@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Model to Parse Single JSON Dictionary
 struct AboutCanada: Codable {
     var title: String?
     var description: String?
