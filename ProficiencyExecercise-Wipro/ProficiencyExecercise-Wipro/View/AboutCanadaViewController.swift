@@ -33,6 +33,7 @@ class AboutCanadaViewController: UIViewController {
         view.backgroundColor = .clear
         setupTableView()
         setTableViewConstraints()
+        loadAndRefreshDataFromService()
     }
 }
 
