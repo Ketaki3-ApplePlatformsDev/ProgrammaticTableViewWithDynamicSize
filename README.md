@@ -1,6 +1,6 @@
 # SampleAssignment
 
-This project is an example of loading dynamic data in table from URL and setting cell height dynamically at run time according to the amount of the data being displayed. It also has a refresh on pull down functionality It's an universal iOS demo application (i.e. for iPhone and iPad).
+This project is an example of loading data in table view from an URL and setting cell height dynamically at run time according to the amount of the data being displayed. It also has a refresh on pull down functionality. It's an universal iOS demo application (i.e. for iPhone and iPad).
 
 All the UI components are added programmatically (i.e. no use of storyboard or xib anywhere). Also the layout constraints are set programmatically.
 
