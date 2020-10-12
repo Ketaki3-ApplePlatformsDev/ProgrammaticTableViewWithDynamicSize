@@ -50,7 +50,11 @@ extension AboutCanadaViewController {
         aboutTableView.dataSource = self
         
         // Settting up dynamic height of row in aboutTableView
-        aboutTableView.estimatedRowHeight = 64
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            aboutTableView.estimatedRowHeight = 65
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            aboutTableView.estimatedRowHeight = 105
+        }
         aboutTableView.rowHeight = UITableView.automaticDimension
         
         // Adding refresh control to call service and reload data in tableView

@@ -56,7 +56,11 @@ class AboutCanadaTableViewCell: UITableViewCell {
     let titleLabel: VerticalTopAlignLabel = {
         
         let label = VerticalTopAlignLabel()
-        label.font = .boldSystemFont(ofSize: 20)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            label.font = .boldSystemFont(ofSize: 20)
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            label.font = .boldSystemFont(ofSize: 25)
+        }
         label.textColor =  .black
         //  Setting number of lines to zero to support dynamic content.
         label.numberOfLines = 0
@@ -69,7 +73,11 @@ class AboutCanadaTableViewCell: UITableViewCell {
     let descriptionLabel: VerticalTopAlignLabel = {
         
         let label = VerticalTopAlignLabel()
-        label.font = .boldSystemFont(ofSize: 14)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            label.font = .boldSystemFont(ofSize: 15)
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            label.font = .boldSystemFont(ofSize: 20)
+        }
         label.textColor =  .gray
         //  Setting number of lines to zero to support dynamic content.
         label.numberOfLines = 0
@@ -144,7 +152,11 @@ class AboutCanadaTableViewCell: UITableViewCell {
         containerView.topAnchor.constraint(equalTo:marginGuide.topAnchor, constant:10).isActive = true
         containerView.bottomAnchor.constraint(equalTo:marginGuide.bottomAnchor, constant:-10).isActive = true
         containerView.trailingAnchor.constraint(equalTo: aboutImageView.leadingAnchor).isActive = true
-        contentView.addConstraint(NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 85))
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            contentView.addConstraint(NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 85))
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            contentView.addConstraint(NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 125))
+        }
         
         // configure title Label
         titleLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor).isActive = true
@@ -159,8 +171,13 @@ class AboutCanadaTableViewCell: UITableViewCell {
         
         // Configure about Image View
         aboutImageView.topAnchor.constraint(equalTo:titleLabel.topAnchor, constant:0).isActive = true
-        aboutImageView.widthAnchor.constraint(equalToConstant:80).isActive = true
-        aboutImageView.heightAnchor.constraint(equalToConstant:80).isActive = true
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            aboutImageView.widthAnchor.constraint(equalToConstant:80).isActive = true
+            aboutImageView.heightAnchor.constraint(equalToConstant:80).isActive = true
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            aboutImageView.widthAnchor.constraint(equalToConstant:120).isActive = true
+            aboutImageView.heightAnchor.constraint(equalToConstant:120).isActive = true
+        }
         aboutImageView.trailingAnchor.constraint(equalTo:marginGuide.trailingAnchor, constant:0).isActive = true
     }
 }
